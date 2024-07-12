@@ -7,7 +7,7 @@ import ThemeToggle from "../../layouts/ThemeToggle.astro";
 import "../../styles/page-load.css";
 
 // Import images using Vite's import.meta.glob
-const images = import.meta.glob('/public/assets/product/*.{jpeg,jpg,png,gif,webp}', { eager: false });
+const images = import.meta.glob('../assets/product/*.{jpeg,jpg,png,gif,webp}', { eager: false });
 
 function slugify(text) {
     return text.toString().toLowerCase()

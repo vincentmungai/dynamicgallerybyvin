@@ -7,7 +7,7 @@ import ThemeToggle from "../../layouts/ThemeToggle.astro";
 import "../../styles/page-load.css";
 
 // Import images using Vite's import.meta.glob
-const images = import.meta.glob('/public/assets/candid/*.{jpeg,jpg,png,gif,webp}', {eager: false});
+const images = import.meta.glob('../assets/candid/*.{jpeg,jpg,png,gif,webp}', {eager: false});
 
 function slugify(text) {
     return text.toString().toLowerCase()
@@ -51,7 +51,7 @@ const allProjectCards = Object.keys(images).map(imagePath => {
     <div class="title-wrapper"><h1>Candid</h1></div>
     <div class="work-projects-container">
         <div class="project-item">
-            <div class="project-modal" data-modal-target="#dsc00206"><img src="/public/assets/candid/DSC00206.webp"
+            <div class="project-modal" data-modal-target="#dsc00206"><img src="../assets/candid/DSC00206.webp"
                                                                           alt="DSC00206" loading="lazy"
                                                                           class="hero-fade">
                 <div class="projects-description-wrapper"><p>DSC00206</p>
@@ -82,7 +82,7 @@ const allProjectCards = Object.keys(images).map(imagePath => {
                 <div class="modal-body">
                     <div class="project-grid">
                         <div class="content_image-wrapper"><img alt="project image"
-                                                                src="/public/assets/candid/DSC00206.webp"
+                                                                src="../assets/candid/DSC00206.webp"
                                                                 class="modal-image hero-fade"></div>
                     </div>
                 </div>
@@ -90,7 +90,7 @@ const allProjectCards = Object.keys(images).map(imagePath => {
             <div id="overlay" class=""></div>
         </div>
         <div class="project-item">
-            <div class="project-modal" data-modal-target="#dsc00313"><img src="/public/assets/candid/DSC00313.webp"
+            <div class="project-modal" data-modal-target="#dsc00313"><img src="../assets/candid/DSC00313.webp"
                                                                           alt="DSC00313" loading="lazy"
                                                                           class="hero-fade">
                 <div class="projects-description-wrapper"><p>DSC00313</p>
@@ -121,7 +121,7 @@ const allProjectCards = Object.keys(images).map(imagePath => {
                 <div class="modal-body">
                     <div class="project-grid">
                         <div class="content_image-wrapper"><img alt="project image"
-                                                                src="/public/assets/candid/DSC00313.webp"
+                                                                src="../assets/candid/DSC00313.webp"
                                                                 class="modal-image hero-fade"></div>
                     </div>
                 </div>
@@ -129,7 +129,7 @@ const allProjectCards = Object.keys(images).map(imagePath => {
             <div id="overlay"></div>
         </div>
         <div class="project-item">
-            <div class="project-modal" data-modal-target="#dsc00863"><img src="/public/assets/candid/DSC00863.webp"
+            <div class="project-modal" data-modal-target="#dsc00863"><img src="../assets/candid/DSC00863.webp"
                                                                           alt="DSC00863" loading="lazy"
                                                                           class="hero-fade">
                 <div class="projects-description-wrapper"><p>DSC00863</p>
@@ -160,7 +160,7 @@ const allProjectCards = Object.keys(images).map(imagePath => {
                 <div class="modal-body">
                     <div class="project-grid">
                         <div class="content_image-wrapper"><img alt="project image"
-                                                                src="/public/assets/candid/DSC00863.webp"
+                                                                src="../assets/candid/DSC00863.webp"
                                                                 class="modal-image hero-fade"></div>
                     </div>
                 </div>
@@ -168,7 +168,7 @@ const allProjectCards = Object.keys(images).map(imagePath => {
             <div id="overlay"></div>
         </div>
         <div class="project-item">
-            <div class="project-modal" data-modal-target="#dsc08138"><img src="/public/assets/candid/DSC08138.webp"
+            <div class="project-modal" data-modal-target="#dsc08138"><img src="../assets/candid/DSC08138.webp"
                                                                           alt="DSC08138" loading="lazy"
                                                                           class="hero-fade">
                 <div class="projects-description-wrapper"><p>DSC08138</p>
@@ -199,7 +199,7 @@ const allProjectCards = Object.keys(images).map(imagePath => {
                 <div class="modal-body">
                     <div class="project-grid">
                         <div class="content_image-wrapper"><img alt="project image"
-                                                                src="/public/assets/candid/DSC08138.webp"
+                                                                src="../assets/candid/DSC08138.webp"
                                                                 class="modal-image hero-fade"></div>
                     </div>
                 </div>
@@ -207,7 +207,7 @@ const allProjectCards = Object.keys(images).map(imagePath => {
             <div id="overlay"></div>
         </div>
         <div class="project-item">
-            <div class="project-modal" data-modal-target="#dsc08139"><img src="/public/assets/candid/DSC08139.webp"
+            <div class="project-modal" data-modal-target="#dsc08139"><img src="../assets/candid/DSC08139.webp"
                                                                           alt="DSC08139" loading="lazy"
                                                                           class="hero-fade">
                 <div class="projects-description-wrapper"><p>DSC08139</p>
@@ -238,7 +238,7 @@ const allProjectCards = Object.keys(images).map(imagePath => {
                 <div class="modal-body">
                     <div class="project-grid">
                         <div class="content_image-wrapper"><img alt="project image"
-                                                                src="/public/assets/candid/DSC08139.webp"
+                                                                src="../assets/candid/DSC08139.webp"
                                                                 class="modal-image hero-fade"></div>
                     </div>
                 </div>
@@ -246,7 +246,7 @@ const allProjectCards = Object.keys(images).map(imagePath => {
             <div id="overlay"></div>
         </div>
         <div class="project-item">
-            <div class="project-modal" data-modal-target="#dsc08188"><img src="/public/assets/candid/DSC08188.webp"
+            <div class="project-modal" data-modal-target="#dsc08188"><img src="../assets/candid/DSC08188.webp"
                                                                           alt="DSC08188" loading="lazy"
                                                                           class="hero-fade">
                 <div class="projects-description-wrapper"><p>DSC08188</p>
@@ -277,7 +277,7 @@ const allProjectCards = Object.keys(images).map(imagePath => {
                 <div class="modal-body">
                     <div class="project-grid">
                         <div class="content_image-wrapper"><img alt="project image"
-                                                                src="/public/assets/candid/DSC08188.webp"
+                                                                src="../assets/candid/DSC08188.webp"
                                                                 class="modal-image hero-fade"></div>
                     </div>
                 </div>
@@ -285,7 +285,7 @@ const allProjectCards = Object.keys(images).map(imagePath => {
             <div id="overlay"></div>
         </div>
         <div class="project-item">
-            <div class="project-modal" data-modal-target="#dsc08235"><img src="/public/assets/candid/DSC08235.webp"
+            <div class="project-modal" data-modal-target="#dsc08235"><img src="../assets/candid/DSC08235.webp"
                                                                           alt="DSC08235" loading="lazy"
                                                                           class="hero-fade">
                 <div class="projects-description-wrapper"><p>DSC08235</p>
@@ -316,7 +316,7 @@ const allProjectCards = Object.keys(images).map(imagePath => {
                 <div class="modal-body">
                     <div class="project-grid">
                         <div class="content_image-wrapper"><img alt="project image"
-                                                                src="/public/assets/candid/DSC08235.webp"
+                                                                src="../assets/candid/DSC08235.webp"
                                                                 class="modal-image hero-fade"></div>
                     </div>
                 </div>
@@ -324,7 +324,7 @@ const allProjectCards = Object.keys(images).map(imagePath => {
             <div id="overlay"></div>
         </div>
         <div class="project-item">
-            <div class="project-modal" data-modal-target="#dsc08259"><img src="/public/assets/candid/DSC08259.webp"
+            <div class="project-modal" data-modal-target="#dsc08259"><img src="../assets/candid/DSC08259.webp"
                                                                           alt="DSC08259" loading="lazy"
                                                                           class="hero-fade">
                 <div class="projects-description-wrapper"><p>DSC08259</p>
@@ -355,7 +355,7 @@ const allProjectCards = Object.keys(images).map(imagePath => {
                 <div class="modal-body">
                     <div class="project-grid">
                         <div class="content_image-wrapper"><img alt="project image"
-                                                                src="/public/assets/candid/DSC08259.webp"
+                                                                src="../assets/candid/DSC08259.webp"
                                                                 class="modal-image hero-fade"></div>
                     </div>
                 </div>
@@ -363,7 +363,7 @@ const allProjectCards = Object.keys(images).map(imagePath => {
             <div id="overlay"></div>
         </div>
         <div class="project-item">
-            <div class="project-modal" data-modal-target="#dsc08260"><img src="/public/assets/candid/DSC08260.webp"
+            <div class="project-modal" data-modal-target="#dsc08260"><img src="../assets/candid/DSC08260.webp"
                                                                           alt="DSC08260" loading="lazy"
                                                                           class="hero-fade">
                 <div class="projects-description-wrapper"><p>DSC08260</p>
@@ -394,7 +394,7 @@ const allProjectCards = Object.keys(images).map(imagePath => {
                 <div class="modal-body">
                     <div class="project-grid">
                         <div class="content_image-wrapper"><img alt="project image"
-                                                                src="/public/assets/candid/DSC08260.webp"
+                                                                src="../assets/candid/DSC08260.webp"
                                                                 class="modal-image hero-fade"></div>
                     </div>
                 </div>
@@ -402,7 +402,7 @@ const allProjectCards = Object.keys(images).map(imagePath => {
             <div id="overlay"></div>
         </div>
         <div class="project-item">
-            <div class="project-modal" data-modal-target="#dsc08269"><img src="/public/assets/candid/DSC08269.webp"
+            <div class="project-modal" data-modal-target="#dsc08269"><img src="../assets/candid/DSC08269.webp"
                                                                           alt="DSC08269" loading="lazy"
                                                                           class="hero-fade">
                 <div class="projects-description-wrapper"><p>DSC08269</p>
@@ -433,7 +433,7 @@ const allProjectCards = Object.keys(images).map(imagePath => {
                 <div class="modal-body">
                     <div class="project-grid">
                         <div class="content_image-wrapper"><img alt="project image"
-                                                                src="/public/assets/candid/DSC08269.webp"
+                                                                src="../assets/candid/DSC08269.webp"
                                                                 class="modal-image hero-fade"></div>
                     </div>
                 </div>
@@ -441,7 +441,7 @@ const allProjectCards = Object.keys(images).map(imagePath => {
             <div id="overlay"></div>
         </div>
         <div class="project-item">
-            <div class="project-modal" data-modal-target="#dsc09660"><img src="/public/assets/candid/DSC09660.webp"
+            <div class="project-modal" data-modal-target="#dsc09660"><img src="../assets/candid/DSC09660.webp"
                                                                           alt="DSC09660" loading="lazy"
                                                                           class="hero-fade">
                 <div class="projects-description-wrapper"><p>DSC09660</p>
@@ -472,7 +472,7 @@ const allProjectCards = Object.keys(images).map(imagePath => {
                 <div class="modal-body">
                     <div class="project-grid">
                         <div class="content_image-wrapper"><img alt="project image"
-                                                                src="/public/assets/candid/DSC09660.webp"
+                                                                src="../assets/candid/DSC09660.webp"
                                                                 class="modal-image hero-fade"></div>
                     </div>
                 </div>
@@ -480,7 +480,7 @@ const allProjectCards = Object.keys(images).map(imagePath => {
             <div id="overlay"></div>
         </div>
         <div class="project-item">
-            <div class="project-modal" data-modal-target="#dsc09924"><img src="/public/assets/candid/DSC09924.webp"
+            <div class="project-modal" data-modal-target="#dsc09924"><img src="../assets/candid/DSC09924.webp"
                                                                           alt="DSC09924" loading="lazy"
                                                                           class="hero-fade">
                 <div class="projects-description-wrapper"><p>DSC09924</p>
@@ -511,7 +511,7 @@ const allProjectCards = Object.keys(images).map(imagePath => {
                 <div class="modal-body">
                     <div class="project-grid">
                         <div class="content_image-wrapper"><img alt="project image"
-                                                                src="/public/assets/candid/DSC09924.webp"
+                                                                src="../assets/candid/DSC09924.webp"
                                                                 class="modal-image hero-fade"></div>
                     </div>
                 </div>
