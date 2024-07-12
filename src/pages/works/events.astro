@@ -6,9 +6,6 @@ import NavBar from "../../layouts/NavBar.astro";
 import ThemeToggle from "../../layouts/ThemeToggle.astro";
 import "../../styles/page-load.css";
 
-// Import images using Vite's import.meta.glob
-const images = import.meta.glob('../assets/events/*.{jpeg,jpg,png,gif,webp}', {eager: false});
-
 function slugify(text) {
     return text.toString().toLowerCase()
         .replace(/\s+/g, '-')           // Replace spaces with -
@@ -18,12 +15,7 @@ function slugify(text) {
         .replace(/-+$/, '');            // Trim - from end of text
 }
 
-// Preload all images
-const allProjectCards = Object.keys(images).map(imagePath => {
-    const imageUrl = images[imagePath];
-    const name = imagePath.substring(imagePath.lastIndexOf('/') + 1, imagePath.lastIndexOf('.'));
-    return {imagePath, name, imageUrl};
-});
+
 ---
 
 <!doctype html>
