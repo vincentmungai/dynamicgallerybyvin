@@ -7,7 +7,7 @@ import ThemeToggle from "../../layouts/ThemeToggle.astro";
 import "../../styles/page-load.css";
 
 // Import images using Vite's import.meta.glob
-const images = import.meta.glob('../assets/product/*.{jpeg,jpg,png,gif,webp}', { eager: false });
+const images = import.meta.glob('/public/assets/product/*.{jpeg,jpg,png,gif,webp}', {eager: false});
 
 function slugify(text) {
     return text.toString().toLowerCase()
@@ -22,87 +22,1909 @@ function slugify(text) {
 const allProjectCards = Object.keys(images).map(imagePath => {
     const imageUrl = images[imagePath];
     const name = imagePath.substring(imagePath.lastIndexOf('/') + 1, imagePath.lastIndexOf('.'));
-    return { imagePath, name, imageUrl };
+    return {imagePath, name, imageUrl};
 });
 ---
 
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <meta
             name="description"
             content="Explore Hunter's stunning world of photography, showcasing the beauty of Nairobi, Kenya, and beyond. Through his lens, experience the vibrant landscapes, unforgettable wildlife, and compelling moments captured meticulously by this acclaimed local photographer."
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Products | Hunter</title>
     <link
             rel="icon"
             type="image/svg+xml"
             href="/assets/icons/hunter-logo.svg"
     />
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="manifest" href="/manifest.json"/>
 </head>
 <body>
-<ThemeToggle />
-<BrandTag />
-<NavBar />
+<ThemeToggle/>
+<BrandTag/>
+<NavBar/>
 <main>
     <div class="title-wrapper"><h1>Products</h1></div>
     <div class="work-projects-container">
-        {allProjectCards.map((content, index) => {
-            const { name, imagePath } = content;
-            const titleSlug = slugify(name);
-            return (
-                    <div class="project-item">
-                        <div class="project-modal" data-modal-target={`#${titleSlug}`}>
-                            <img src={imagePath} alt={name} loading="lazy" class="hero-fade"/>
-                            <div class="projects-description-wrapper">
-                                <p>{name}</p>
-                                <div class="icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                         x="0px" y="0px" width="100%" height="100%" viewBox="0 0 16 16">
-                                        <g transform="translate(0, 0)">
-                                            <line fill="none" stroke="#ffffff" stroke-linecap="round"
-                                                  stroke-linejoin="round" stroke-miterlimit="10" x1="14.5"
-                                                  y1="1.5" x2="9.5" y2="6.5" data-color="color-2"/>
-                                            <line fill="none" stroke="#ffffff" stroke-linecap="round"
-                                                  stroke-linejoin="round" stroke-miterlimit="10" x1="6.5"
-                                                  y1="9.5" x2="1.5" y2="14.5" data-color="color-2"/>
-                                            <polyline fill="none" stroke="#ffffff" stroke-linecap="round"
-                                                      stroke-linejoin="round" stroke-miterlimit="10"
-                                                      points="8.5,1.5 14.5,1.5 14.5,7.5 "/>
-                                            <polyline fill="none" stroke="#ffffff" stroke-linecap="round"
-                                                      stroke-linejoin="round" stroke-miterlimit="10"
-                                                      points="1.5,8.5 1.5,14.5 7.5,14.5 "/>
-                                        </g>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="modal" id={titleSlug}>
-                            <div class="modal-header">
-                                <div class="title">{name}</div>
-                                <button data-close-button class="close-button">&times;</button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="project-grid">
-                                    <div class="content_image-wrapper">
-                                        <img alt="project image" src={imagePath} class="modal-image hero-fade"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="overlay"></div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01432"><img src="/public/assets/product/DSC01432.webp"
+                                                                          alt="DSC01432" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01432</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
                     </div>
-            );
-        })}
-
+                </div>
+            </div>
+            <div class="modal" id="dsc01432">
+                <div class="modal-header">
+                    <div class="title">DSC01432</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01432.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01443"><img src="/public/assets/product/DSC01443.webp"
+                                                                          alt="DSC01443" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01443</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01443">
+                <div class="modal-header">
+                    <div class="title">DSC01443</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01443.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01444"><img src="/public/assets/product/DSC01444.webp"
+                                                                          alt="DSC01444" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01444</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01444">
+                <div class="modal-header">
+                    <div class="title">DSC01444</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01444.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01447"><img src="/public/assets/product/DSC01447.webp"
+                                                                          alt="DSC01447" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01447</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01447">
+                <div class="modal-header">
+                    <div class="title">DSC01447</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01447.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01448"><img src="/public/assets/product/DSC01448.webp"
+                                                                          alt="DSC01448" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01448</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01448">
+                <div class="modal-header">
+                    <div class="title">DSC01448</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01448.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01449"><img src="/public/assets/product/DSC01449.webp"
+                                                                          alt="DSC01449" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01449</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01449">
+                <div class="modal-header">
+                    <div class="title">DSC01449</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01449.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01450"><img src="/public/assets/product/DSC01450.webp"
+                                                                          alt="DSC01450" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01450</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01450">
+                <div class="modal-header">
+                    <div class="title">DSC01450</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01450.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01452"><img src="/public/assets/product/DSC01452.webp"
+                                                                          alt="DSC01452" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01452</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01452">
+                <div class="modal-header">
+                    <div class="title">DSC01452</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01452.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01453"><img src="/public/assets/product/DSC01453.webp"
+                                                                          alt="DSC01453" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01453</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01453">
+                <div class="modal-header">
+                    <div class="title">DSC01453</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01453.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01461"><img src="/public/assets/product/DSC01461.webp"
+                                                                          alt="DSC01461" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01461</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01461">
+                <div class="modal-header">
+                    <div class="title">DSC01461</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01461.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01463"><img src="/public/assets/product/DSC01463.webp"
+                                                                          alt="DSC01463" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01463</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01463">
+                <div class="modal-header">
+                    <div class="title">DSC01463</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01463.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01467"><img src="/public/assets/product/DSC01467.webp"
+                                                                          alt="DSC01467" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01467</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01467">
+                <div class="modal-header">
+                    <div class="title">DSC01467</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01467.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01469"><img src="/public/assets/product/DSC01469.webp"
+                                                                          alt="DSC01469" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01469</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01469">
+                <div class="modal-header">
+                    <div class="title">DSC01469</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01469.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01470"><img src="/public/assets/product/DSC01470.webp"
+                                                                          alt="DSC01470" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01470</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01470">
+                <div class="modal-header">
+                    <div class="title">DSC01470</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01470.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01471"><img src="/public/assets/product/DSC01471.webp"
+                                                                          alt="DSC01471" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01471</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01471">
+                <div class="modal-header">
+                    <div class="title">DSC01471</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01471.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01474"><img src="/public/assets/product/DSC01474.webp"
+                                                                          alt="DSC01474" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01474</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01474">
+                <div class="modal-header">
+                    <div class="title">DSC01474</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01474.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01476"><img src="/public/assets/product/DSC01476.webp"
+                                                                          alt="DSC01476" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01476</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01476">
+                <div class="modal-header">
+                    <div class="title">DSC01476</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01476.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01482"><img src="/public/assets/product/DSC01482.webp"
+                                                                          alt="DSC01482" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01482</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01482">
+                <div class="modal-header">
+                    <div class="title">DSC01482</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01482.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01485"><img src="/public/assets/product/DSC01485.webp"
+                                                                          alt="DSC01485" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01485</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01485">
+                <div class="modal-header">
+                    <div class="title">DSC01485</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01485.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01489"><img src="/public/assets/product/DSC01489.webp"
+                                                                          alt="DSC01489" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01489</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01489">
+                <div class="modal-header">
+                    <div class="title">DSC01489</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01489.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01490"><img src="/public/assets/product/DSC01490.webp"
+                                                                          alt="DSC01490" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01490</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01490">
+                <div class="modal-header">
+                    <div class="title">DSC01490</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01490.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01499"><img src="/public/assets/product/DSC01499.webp"
+                                                                          alt="DSC01499" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01499</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01499">
+                <div class="modal-header">
+                    <div class="title">DSC01499</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01499.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01500"><img src="/public/assets/product/DSC01500.webp"
+                                                                          alt="DSC01500" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01500</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01500">
+                <div class="modal-header">
+                    <div class="title">DSC01500</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01500.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01502"><img src="/public/assets/product/DSC01502.webp"
+                                                                          alt="DSC01502" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01502</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01502">
+                <div class="modal-header">
+                    <div class="title">DSC01502</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01502.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01504"><img src="/public/assets/product/DSC01504.webp"
+                                                                          alt="DSC01504" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01504</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01504">
+                <div class="modal-header">
+                    <div class="title">DSC01504</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01504.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01519"><img src="/public/assets/product/DSC01519.webp"
+                                                                          alt="DSC01519" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01519</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01519">
+                <div class="modal-header">
+                    <div class="title">DSC01519</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01519.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01520"><img src="/public/assets/product/DSC01520.webp"
+                                                                          alt="DSC01520" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01520</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01520">
+                <div class="modal-header">
+                    <div class="title">DSC01520</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01520.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01522"><img src="/public/assets/product/DSC01522.webp"
+                                                                          alt="DSC01522" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01522</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01522">
+                <div class="modal-header">
+                    <div class="title">DSC01522</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01522.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01523"><img src="/public/assets/product/DSC01523.webp"
+                                                                          alt="DSC01523" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01523</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01523">
+                <div class="modal-header">
+                    <div class="title">DSC01523</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01523.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01524"><img src="/public/assets/product/DSC01524.webp"
+                                                                          alt="DSC01524" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01524</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01524">
+                <div class="modal-header">
+                    <div class="title">DSC01524</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01524.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01525"><img src="/public/assets/product/DSC01525.webp"
+                                                                          alt="DSC01525" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01525</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01525">
+                <div class="modal-header">
+                    <div class="title">DSC01525</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01525.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01526"><img src="/public/assets/product/DSC01526.webp"
+                                                                          alt="DSC01526" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01526</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01526">
+                <div class="modal-header">
+                    <div class="title">DSC01526</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01526.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01528"><img src="/public/assets/product/DSC01528.webp"
+                                                                          alt="DSC01528" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01528</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01528">
+                <div class="modal-header">
+                    <div class="title">DSC01528</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01528.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01529"><img src="/public/assets/product/DSC01529.webp"
+                                                                          alt="DSC01529" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01529</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01529">
+                <div class="modal-header">
+                    <div class="title">DSC01529</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01529.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01530"><img src="/public/assets/product/DSC01530.webp"
+                                                                          alt="DSC01530" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01530</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01530">
+                <div class="modal-header">
+                    <div class="title">DSC01530</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01530.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01538"><img src="/public/assets/product/DSC01538.webp"
+                                                                          alt="DSC01538" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01538</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01538">
+                <div class="modal-header">
+                    <div class="title">DSC01538</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01538.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01539"><img src="/public/assets/product/DSC01539.webp"
+                                                                          alt="DSC01539" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01539</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01539">
+                <div class="modal-header">
+                    <div class="title">DSC01539</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01539.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01542"><img src="/public/assets/product/DSC01542.webp"
+                                                                          alt="DSC01542" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01542</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01542">
+                <div class="modal-header">
+                    <div class="title">DSC01542</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01542.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01558"><img src="/public/assets/product/DSC01558.webp"
+                                                                          alt="DSC01558" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01558</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01558">
+                <div class="modal-header">
+                    <div class="title">DSC01558</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01558.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01559"><img src="/public/assets/product/DSC01559.webp"
+                                                                          alt="DSC01559" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01559</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01559">
+                <div class="modal-header">
+                    <div class="title">DSC01559</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01559.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01560"><img src="/public/assets/product/DSC01560.webp"
+                                                                          alt="DSC01560" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01560</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01560">
+                <div class="modal-header">
+                    <div class="title">DSC01560</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01560.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01561"><img src="/public/assets/product/DSC01561.webp"
+                                                                          alt="DSC01561" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01561</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01561">
+                <div class="modal-header">
+                    <div class="title">DSC01561</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01561.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01563"><img src="/public/assets/product/DSC01563.webp"
+                                                                          alt="DSC01563" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01563</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01563">
+                <div class="modal-header">
+                    <div class="title">DSC01563</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01563.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01564"><img src="/public/assets/product/DSC01564.webp"
+                                                                          alt="DSC01564" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01564</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01564">
+                <div class="modal-header">
+                    <div class="title">DSC01564</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01564.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01565"><img src="/public/assets/product/DSC01565.webp"
+                                                                          alt="DSC01565" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01565</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01565">
+                <div class="modal-header">
+                    <div class="title">DSC01565</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01565.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01567"><img src="/public/assets/product/DSC01567.webp"
+                                                                          alt="DSC01567" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01567</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01567">
+                <div class="modal-header">
+                    <div class="title">DSC01567</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01567.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01568"><img src="/public/assets/product/DSC01568.webp"
+                                                                          alt="DSC01568" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01568</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01568">
+                <div class="modal-header">
+                    <div class="title">DSC01568</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01568.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
+        <div class="project-item">
+            <div class="project-modal" data-modal-target="#dsc01569"><img src="/public/assets/product/DSC01569.webp"
+                                                                          alt="DSC01569" loading="lazy"
+                                                                          class="hero-fade">
+                <div class="projects-description-wrapper"><p>DSC01569</p>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                             y="0px" width="100%" height="100%" viewBox="0 0 16 16">
+                            <g transform="translate(0, 0)">
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="14.5" y1="1.5" x2="9.5" y2="6.5"
+                                      data-color="color-2"></line>
+                                <line fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                      stroke-miterlimit="10" x1="6.5" y1="9.5" x2="1.5" y2="14.5"
+                                      data-color="color-2"></line>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="8.5,1.5 14.5,1.5 14.5,7.5 "></polyline>
+                                <polyline fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"
+                                          stroke-miterlimit="10" points="1.5,8.5 1.5,14.5 7.5,14.5 "></polyline>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="dsc01569">
+                <div class="modal-header">
+                    <div class="title">DSC01569</div>
+                    <button data-close-button="" class="close-button">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-grid">
+                        <div class="content_image-wrapper"><img alt="project image"
+                                                                src="/public/assets/product/DSC01569.webp"
+                                                                class="modal-image hero-fade"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="overlay"></div>
+        </div>
     </div>
 </main>
-<FooterLayout />
+<FooterLayout/>
 <script src="../../script/pop-up.js"></script>
 </body>
 </html>
